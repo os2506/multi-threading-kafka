@@ -10,7 +10,7 @@ import com.oss.demo.repository.PaymentEventRepository;
 @Service
 public class PaymentEventProducer {
    
-	private static final String TOPIC = "payment_events";
+   private static final String TOPIC = "payment_events";
 	
     @Autowired
     private PaymentEventRepository paymentEventRepository;
@@ -23,7 +23,6 @@ public class PaymentEventProducer {
     }
     
     public void savePaymentEvent(PaymentEvent paymentEvent) {
-        // Save to the database
     	paymentEventRepository.save(paymentEvent);
     }
 }
